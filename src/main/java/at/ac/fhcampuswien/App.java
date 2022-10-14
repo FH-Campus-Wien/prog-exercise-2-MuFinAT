@@ -28,6 +28,7 @@ public class App {
 
             if (number <= 0) {
                 System.out.printf("The largest number is %.2f", highestNumber); // print f um das Format anzugeben
+                System.out.println(); //without this app test fails
                 break;
             }
         }
@@ -92,7 +93,36 @@ public class App {
         int h = scanner.nextInt();
         System.out.print("c: ");
         int c = scanner.next().charAt(0);
+
+        if (h % 2 != 0) {
+            for (int i = 0; i <= h / 2; i++) {
+                for (int j = i; j < h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = - i; k <= i; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+// upper part of the diamond shape
+            }
+            for (int i = h / 2; i > 0; i--) {
+                for (int j = i; j <= h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = - i + 1; k < i ; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+            }
+//lower half of the diamond shape
+
+        } else {
+            System.out.println("Invalid number!");
+
+        }
     }
+// https://www.youtube.com/watch?v=YKdB1kpeA_c good explanation to this problem (but numeric)
+// also done this in the tutorium
 
     //todo Task 5
     public void marks() {
