@@ -89,10 +89,11 @@ public class App {
     public void printRhombus() {
         // input your solution here
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("h: ");
-        int h = scanner.nextInt();
+            int h = scanner.nextInt();
         System.out.print("c: ");
-        int c = scanner.next().charAt(0);
+            int c = scanner.next().charAt(0);
 
         if (h % 2 != 0) {
             for (int i = 0; i <= h / 2; i++) {
@@ -102,19 +103,19 @@ public class App {
                 for (int k = - i; k <= i; k++) {
                     System.out.print((char) (c - Math.abs(k)));
                 }
-                System.out.println();
+                    System.out.println();
 // upper part of the diamond shape
             }
             for (int i = h / 2; i > 0; i--) {
                 for (int j = i; j <= h / 2; j++) {
                     System.out.print(" ");
                 }
-                for (int k = - i + 1; k < i ; k++) {
+                for (int k = - i + 1; k < i; k++) {
                     System.out.print((char) (c - Math.abs(k)));
                 }
-                System.out.println();
+                    System.out.println();
             }
-//lower half of the diamond shape
+//lower part of the diamond shape
 
         } else {
             System.out.println("Invalid number!");
@@ -122,7 +123,7 @@ public class App {
         }
     }
 // https://www.youtube.com/watch?v=YKdB1kpeA_c good explanation to this problem (but numeric)
-// also done this in the tutorium
+// https://codereview.stackexchange.com/questions/40417/print-an-ascii-diamond also a good help
 
     //todo Task 5
     public void marks() {
@@ -156,7 +157,7 @@ public class App {
                         avrg = (double) sum / counter;
                     }
             System.out.printf("Average: %.2f", avrg);
-            System.out.println(); // empty so average and negative marks get shown in diffrent lines
+            System.out.println(); // empty so average and negative marks get shown in different lines
             System.out.println("Negative marks: " + nmarks);
         }
 
@@ -171,7 +172,7 @@ public class App {
         int sum = 0;
         int var;
 
-        while (number != 1 && number != 4) {
+        while (number != 1 && number != 4) { //tried with | but didn´t work out quite well bc then it would be active all the time
 
             while (number > 0) {
                 var = number % 10;
@@ -188,11 +189,6 @@ public class App {
             }
 
         }
-
-
-
-
-
 
     public static void main(String[] args){
         App exercise2 = new App();
