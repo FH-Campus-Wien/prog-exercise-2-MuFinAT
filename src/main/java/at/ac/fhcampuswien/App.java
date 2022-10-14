@@ -87,7 +87,11 @@ public class App {
     //todo Task 4
     public void printRhombus() {
         // input your solution here
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("h: ");
+        int h = scanner.nextInt();
+        System.out.print("c: ");
+        int c = scanner.nextInt().charAt(0);
     }
 
     //todo Task 5
