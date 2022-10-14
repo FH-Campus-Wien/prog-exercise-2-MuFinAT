@@ -42,7 +42,7 @@ public class App {
         int number = scanner.nextInt();
 
         if (number < 0) {
-            System.out.println("number: Invalid number!");
+            System.out.println("Invalid number!");
         }
 
 
@@ -91,7 +91,7 @@ public class App {
         System.out.print("h: ");
         int h = scanner.nextInt();
         System.out.print("c: ");
-        int c = scanner.nextInt().charAt(0);
+        int c = scanner.next().charAt(0);
     }
 
     //todo Task 5
